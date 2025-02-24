@@ -40,7 +40,7 @@ phases:
       - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/swiggy:latest"
 
   post_build:
-  commands:
+    commands:
     - echo "Performing Trivy image scan after building the image..."
     - trivy image "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/swiggy:latest" >> trivyimage.txt
 
