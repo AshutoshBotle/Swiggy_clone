@@ -52,8 +52,7 @@ phases:
     - sonar-scanner -Dsonar.projectKey=swiggy -Dsonar.sources=. -Dsonar.host.url=http://3.111.218.91:9000/ -Dsonar.login=$SONAR_TOKEN
 
     - echo "Sending email notification..."
-    - aws ses send-email --from "ashutoshbotle98@gmail.com" --to "ashutoshbotle63@gmail.com" --subject "CodeBuild Status: $CODEBUILD_BUILD_ID" --text "Build status: $CODEBUILD_BUILD_STATUS" --region "ap-south-1"
-
+    
 artifacts:
   files:
     - appspec.yml
