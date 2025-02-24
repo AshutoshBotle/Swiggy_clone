@@ -61,8 +61,8 @@ post_build:
         -Dsonar.host.url=http://3.111.218.91:9000 \
         -Dsonar.login="$SONAR_TOKEN"
     - aws ses send-email \
-        --from "madithati123@gmail.com" \
-        --to "madithati123@gmail.com" \
+        --from "ashutoshbotle98@gmail.com" \
+        --to "ashutoshbotle63@gmail.com" \
         --subject "CodeBuild Status: $CODEBUILD_BUILD_ID" \
         --text "Build status: $CODEBUILD_BUILD_STATUS" \
         --region "ap-south-1" # Update with your preferred AWS region
